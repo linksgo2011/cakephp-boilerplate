@@ -1,0 +1,15 @@
+{
+    "name": "cakephp-boilerplate",
+    "require": {
+        "cakephp/cakephp": "2.9.*"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
