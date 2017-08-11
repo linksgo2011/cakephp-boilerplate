@@ -21,4 +21,12 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+
+    /**
+     * 返回 admin LTE的相对链接
+     */
+    public function adminLTEURL($path,$options = array()){
+//        pr(Configure::read('App.cssBaseUrl'));exit;
+        return $this->assetUrl($path, $options + array('pathPrefix' => "/bower_components/AdminLTE/"));
+    }
 }

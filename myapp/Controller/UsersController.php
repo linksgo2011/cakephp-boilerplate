@@ -58,7 +58,10 @@ class UsersController extends AppController {
     }
 
     public  function login() {
-        $this->layout = "default";
+        $this->layout = null;
+        if ( $this->request->isPost() ) {
+          return $this->error("登录失败!");
+        }
     }
 
     public function logout() {
