@@ -30,9 +30,8 @@
     <!-- /.login-logo -->
     <div class="login-box-body">
         <?php echo $this->Session->flash(); ?>
-        
         <p class="login-box-msg">登录</p>
-
+        
         <form method="post">
             <div class="form-group has-feedback">
                 <input type="text" name="username"  class="form-control" placeholder="用户名">

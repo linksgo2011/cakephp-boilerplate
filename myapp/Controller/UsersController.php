@@ -57,7 +57,7 @@ class UsersController extends AppController {
         }
     }
 
-    public  function login($action = '/Users/home') {
+    public  function login($action = '/admin/Users/home') {
         $this->layout = null;
         if ( $this->request->isPost() ) {
 
@@ -72,7 +72,7 @@ class UsersController extends AppController {
                 $this->warning( '密码错误' );
                 return;
             }
-            
+
             $this->UserAuth->login( $user );
             $uri = $this->Session->read( UserAuthComponent::originAfterLogin );
             if ( !$uri ) {
@@ -97,6 +97,14 @@ class UsersController extends AppController {
         if($this->request->isPost()){
             $data  = $this->request->data;
         }
+    }
+
+    public function admin_home()
+    {
+    }
+
+    public function admin_about(){
+        
     }
 
     public function password()
