@@ -145,6 +145,7 @@
         reserved.
     </footer>
 </div>
+<?php echo $this->element('sql_dump'); ?>
 <!-- ./wrapper -->
 
 <script src="<?=$this->Html->adminLTEURL("plugins")?>/jQuery/jquery-2.2.3.min.js"></script>
