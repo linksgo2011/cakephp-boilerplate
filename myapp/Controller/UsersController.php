@@ -57,10 +57,32 @@ class UsersController extends AppController {
         }
     }
 
-    public  function login() {
+    public  function login($action = '/Users/home') {
         $this->layout = null;
         if ( $this->request->isPost() ) {
-          return $this->error("登录失败!");
+
+            $username = $this->request->data['username'];
+            $password = $this->request->data['password'];
+
+            $user = $this->User->findByUsername($username);
+            if (empty($user) || $user['User']['password'] != $password ) {
+                $this->User->validationErrors = array(
+                    'password' => array( "密码错误" )
+                );
+                $this->warning( '密码错误' );
+                return;
+            }
+            
+            $this->UserAuth->login( $user );
+            $uri = $this->Session->read( UserAuthComponent::originAfterLogin );
+            if ( !$uri ) {
+                $uri = $action;
+            }
+
+            CakeSession::delete( 'Message.flash' );
+            $this->Session->delete( UserAuthComponent::originAfterLogin );
+            $this->succ("登录成功!");
+            $this->redirect( $uri );
         }
     }
 

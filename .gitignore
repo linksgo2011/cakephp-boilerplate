@@ -7,3 +7,4 @@ node_modules/
 .Vendor
 bower_components
 myapp/webroot/bower_components
+myapp/tmp/cache/*
