@@ -123,7 +123,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/users/logout" alt="退出" data-toggle="control-sidebar"><i class="fa fa-unlock"></i></a>
+                        <a href="<?=$this->base;?>/users/logout" alt="退出"><i class="fa fa-unlock"></i></a>
                     </li>
                 </ul>
             </div>
