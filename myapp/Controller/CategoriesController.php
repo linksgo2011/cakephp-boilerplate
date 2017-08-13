@@ -19,6 +19,8 @@ class CategoriesController extends AppController {
 
 	public $layout = "admin";
 
+	public $helpers = array('BForm');
+
 	/**
  * index method
  *

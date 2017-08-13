@@ -24,6 +24,10 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="<?=$this->Html->adminLTEURL("plugins")?>/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="<?=$this->Html->adminLTEURL("bootstrap")?>/js/bootstrap.min.js"></script>
+    <script src="<?=$this->Html->adminLTEURL("dist")?>/js/app.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -146,18 +150,5 @@
     </footer>
 </div>
 <?php echo $this->element('sql_dump'); ?>
-<!-- ./wrapper -->
-
-<script src="<?=$this->Html->adminLTEURL("plugins")?>/jQuery/jquery-2.2.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button);
-</script>
-<!-- Bootstrap 3.3.6 -->
-<script src="<?=$this->Html->adminLTEURL("bootstrap")?>/js/bootstrap.min.js"></script>
-
-<!-- jQuery 2.2.3 -->
-<script src="<?=$this->Html->adminLTEURL("dist")?>/js/app.min.js"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
+                    <li class="<?php echo $this->request->url=='admin/Categories/add'?'active':'';?>"><a href="<?php echo $this->Html->url('/admin/Categories/add')?>"><i class="fa fa-circle-o"></i>添加分类</a></li>
                     <li class="<?php echo $this->request->url=='admin/Categories/index'?'active':'';?>"><a href="<?php echo $this->Html->url('/admin/Categories/index')?>"><i class="fa fa-circle-o"></i>文章分类管理</a></li>
                     <li class="<?php echo $this->request->url=='admin/Posts/index'?'active':'';?>"><a href="<?php echo $this->Html->url('/admin/Posts/index')?>"><i class="fa fa-circle-o"></i>文章管理</a></li>
                 </ul>

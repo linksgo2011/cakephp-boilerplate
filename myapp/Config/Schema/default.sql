@@ -35,7 +35,7 @@ CREATE TABLE `categories` (
   `color` char(7) NOT NULL DEFAULT '',
   `isdisabled` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `listorder` tinyint(4) unsigned NOT NULL DEFAULT '99',
-  `createtime` int(10) UNSIGNED DEFAULT 0 NOT NULL,
-	`updatetime` int(10) UNSIGNED DEFAULT 0 NOT NULL,
+  `created` datetime(),
+	`modified` datetime(),
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;

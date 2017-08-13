@@ -1,28 +1,29 @@
-<div class="categories form">
-<?php echo $this->Form->create('Category'); ?>
-	<fieldset>
-		<legend><?php echo __('Admin Add Category'); ?></legend>
-	<?php
-		echo $this->Form->input('parent');
-		echo $this->Form->input('name');
-		echo $this->Form->input('title');
-		echo $this->Form->input('keywords');
-		echo $this->Form->input('description');
-		echo $this->Form->input('thumb');
-		echo $this->Form->input('content');
-		echo $this->Form->input('color');
-		echo $this->Form->input('isdisabled');
-		echo $this->Form->input('listorder');
-		echo $this->Form->input('createtime');
-		echo $this->Form->input('updatetime');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<section class="content-header">
+	<h1>
+		添加分类
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="/<?php echo $this->Html->url("/admin/Users/home");?>"><i class="fa fa-dashboard"></i> 首页</a></li>
+		<li><a href="<?php echo $this->Html->url("/admin/Categories/index"); ?>">分类列表</a></li>
+		<li class="active">添加分类</li>
+	</ol>
+</section>
+<section class="content bg-white">
+	<?php echo $this->Session->flash(); ?>
 
-		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li>
-	</ul>
-</div>
+	<div class="categories BForm">
+		<?php echo $this->BForm->create('Category'); ?>
+		<fieldset>
+			<?php
+			echo $this->BForm->input('name',array('label'=>"分类名",'class'=>'col-sm-6'));
+			echo $this->BForm->input('title',array('label'=>'标题'));
+			echo $this->BForm->input('keywords',array('label'=>'关键字'));
+			echo $this->BForm->input('description',array('label'=>'描述'));
+			echo $this->BForm->input('listorder',array('label'=>'排序'));
+			echo $this->BForm->submit('提交');
+			?>
+		</fieldset>
+		<?php echo $this->Form->end(); ?>
+	</div>
+
+</section>
